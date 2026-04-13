@@ -1,4 +1,3 @@
-// @ts-ignore
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -36,8 +35,11 @@ const Curated = () => {
           </div>
         </div>
 
+      
         <div className="flex flex-col gap-5 md:gap-8 text-white w-full">
+     
           <div className="flex flex-col sm:flex-row gap-5">
+  
             <div
               data-aos="fade-left"
               className="w-full sm:w-1/2 h-60 cursor-pointer bg-[#201f1f] group rounded-2xl relative overflow-hidden"
@@ -50,6 +52,7 @@ const Curated = () => {
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvDvox4YmAO6o_8Z3YBr8sGqnTxyNEzDCCT8EoN4p_4QVzfQ3TuJbpvyandfor89Px4iwDHH3WmJuaLmKIQF4AlliDvotdIyG-xJazOkGBqrc7j5Z9Dlc1K4hcAGmKh_0wmqVeF0SVjG0bJ3nNf7H7T2rcJCh0wiTKzl8pzymbOfx537MXdxQ71iYMzlA7USFRT8wbBDdqU0Nzebt0BNKWoX6SW8UsANyTsBgpRwv-b9hR-55Yh11-0StS-OT_j3lUJEFJwX3T6xw"
                 className="w-24 h-24 absolute -bottom-3.75 right-0 opacity-75 group-hover:scale-110 transition duration-300"
+              
               />
             </div>
 
@@ -69,6 +72,7 @@ const Curated = () => {
             </div>
           </div>
 
+   
           <div
             data-aos="fade-left"
             className="bg-[#201f1f] cursor-pointer rounded-3xl p-6 md:p-8 relative overflow-hidden h-60 group"
@@ -78,6 +82,8 @@ const Curated = () => {
                 <i className="ri-customer-service-fill text-blue-500 text-3xl mb-3"></i>
                 <h3 className="text-xl md:text-2xl font-bold">Accessories</h3>
               </div>
+
+              
             </div>
 
             <img
