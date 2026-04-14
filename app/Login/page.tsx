@@ -1,16 +1,14 @@
 "use client";
 import { useState } from "react";
-
+import Image from "next/image";
 const Login = () => {
-  const [activeTab, setActiveTab] = useState("login");
-  const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<{ email?: string; password?: string }>(
     {},
   );
   const validate = () => {
-    let newErrors: { email?: string; password?: string } = {};
+    const newErrors: { email?: string; password?: string } = {};
     if (!email) {
       newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(email)) {
@@ -41,12 +39,15 @@ const Login = () => {
         className="w-full max-w-5xl flex flex-col md:flex-row rounded-2xl overflow-hidden border border-white/10 backdrop-blur-xl bg-white/5 shadow-[0_0_10px_rgba(0,255,255,0.08)]"
       >
         <div className="relative w-full md:w-1/2 h-72 md:h-auto group overflow-hidden">
-          <img
+          <Image
+            width={500}
+            height={500}
+            alt=""
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqRxEueIT-rZLCkB0VVhhKO0kNceBm_2_0nr0xZmae2qFjM9IJlomjFJIvIQt60mpX-Ysdri5kQiX4J2SbZr3nxYbcXyCytYrbFT6mrW1Ztn8uak45gk-k8IeiWFPHoly53I7sfOhx3ocRTLp2OhTGXh-EVNUXN06fHpLiuXcQfjRvOQHStdD6Q5UfOQuO6xAb0HdWjYiY0CrES-pig_7rXL_ITYP5UvEwd63QAXDK-dIEy3NKcvlTanINwj9E2NBBqdBwPw41J-4"
             className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent md:bg-gradient-to-r"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent md:bg-linear-to-r"></div>
           <div className="absolute inset-0 bg-cyan-500/10 mix-blend-overlay"></div>
 
           <div className="absolute bottom-10 left-10 right-10">
@@ -60,8 +61,8 @@ const Login = () => {
             </p>
           </div>
 
-          <div className="absolute top-6 left-6 w-10 h-[1px] bg-cyan-400/40"></div>
-          <div className="absolute top-6 left-6 h-10 w-[1px] bg-cyan-400/40"></div>
+          <div className="absolute top-6 left-6 w-10 h-px bg-cyan-400/40"></div>
+          <div className="absolute top-6 left-6 h-10 w-px bg-cyan-400/40"></div>
         </div>
 
         <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
@@ -117,14 +118,14 @@ const Login = () => {
               </a>
             </div>
 
-            <button className="w-full py-4 cursor-pointer rounded-full text-black font-bold tracking-widest uppercase bg-gradient-to-r from-cyan-400 to-cyan-600 shadow-[0_0_10px_rgba(0,255,255,0.6)] hover:scale-[1.02] active:scale-95 transition duration-300">
+            <button className="w-full py-4 cursor-pointer rounded-full text-black font-bold tracking-widest uppercase bg-linear-to-r from-cyan-400 to-cyan-600 shadow-[0_0_10px_rgba(0,255,255,0.6)] hover:scale-[1.02] active:scale-95 transition duration-300">
               ACCESS CORE
             </button>
 
             <div className="flex items-center gap-4">
-              <div className="flex-1 h-[1px] bg-white/10"></div>
+              <div className="flex-1 h-px bg-white/10"></div>
               <span className="text-xs text-white/40">OR CONNECT VIA</span>
-              <div className="flex-1 h-[1px] bg-white/10"></div>
+              <div className="flex-1 h-px bg-white/10"></div>
             </div>
 
             <div className="grid grid-cols-3 gap-4">

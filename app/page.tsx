@@ -5,24 +5,19 @@ import FlashSale from "./components/FlashSale";
 import Footer from "./components/Footer";
 import Product from "./components/product";
 import Reviews from "./components/Review";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
+
+import AOSProvider from "./components/AOSProvider";
 export default function Home() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
   return (
     <div>
-      <Body />
-      <Curated />
-      <Product />
-      <FlashSale />
-      <Reviews />
-      <Footer />
+      <AOSProvider>
+        <Body />
+        <Curated />
+        <Product />
+        <FlashSale />
+        <Reviews />
+        <Footer />
+      </AOSProvider>
     </div>
   );
 }

@@ -1,6 +1,5 @@
-import React from "react";
-import Aos from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 const Reviews = () => {
   return (
     <section data-aos="fade-down" className="py-24  mx-auto px-8 flex-wrap">
@@ -22,14 +21,15 @@ const Reviews = () => {
           </div>
 
           <p className="italic  mb-8 text-on-surface-variant">
-            "The build quality of the Ether X1 is unlike anything I've held.
-            Kinetic Ether is truly pushing the boundaries of aesthetics and
-            hardware."
+            &quot;The build quality of the Ether X1 is unlike anything I&apos;ve
+            held.&quot;
           </p>
 
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full overflow-hidden">
-              <img
+              <Image
+                width={60}
+                height={60}
                 alt="User"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdEe6JK0VEmLfyCZekGJA92JrD12CkYtN9LSkyw2nDFHJm0KIeNQ8MuKYSt30K_T0SvUvhVoJhnuFQ0OX1-oPA_bkNWuYEwlqCkKa3UK8RpwgeK_EXJa4jW8dP-l_c05gctDWIo-kFFhzWn9XAt4uCne42B_Ki5IVd1IIilTpAe8Svb1UUC2EdANuwbBJzdDNBeT9fdne2kB15bplcVnmsp3hnGNUC2-dWXCqkbBFdZ3P-m-uAwEKfsUKHq2zmjR4lwA9kcrcKIE8"
               />
@@ -51,13 +51,15 @@ const Reviews = () => {
           </div>
 
           <p className="italic  mb-8 text-on-surface-variant">
-            "Shipping was incredibly fast, and the unboxing experience felt like
-            a luxury event. Best customer service in the tech industry."
+            &quot;Shipping was incredibly fast and the unboxing experience felt
+            like a luxury event.&quot;
           </p>
 
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full overflow-hidden">
-              <img
+              <Image
+                width={60}
+                height={60}
                 alt="User"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtfjw-ylRrTi-6pWbiUQHMWDvi17aA2jEJlKzx0tFcO8Dj1YDdPI2sOGZHbxnRr7K39iLuqGCjIPeMIumJ74ByCIgNc84_JRX1gMplYBsGySbhCT8V7-IqKU1HWWKB4vYuY_AnWwp1Vsh2IFc7RRd0Mv-p4bylb2tC2ZBQ8_R7pYLVg64DN1XCu5wVIbsbyzVpymM98Mk5nE2_zmVTeVGE9tOy9T0TP5Qeulgq3yYnL7QOY4cmfgaXsoI_i-NNYi_gAyrQjmDih2I"
               />
@@ -81,13 +83,15 @@ const Reviews = () => {
           </div>
 
           <p className="italic  mb-8 text-on-surface-variant">
-            "The integration between my Ether watch and phone is seamless. This
-            ecosystem is finally a worthy competitor to the giants."
+            &quot;The integration between my Ether watch and phone is
+            seamless.&quot;
           </p>
 
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full overflow-hidden">
-              <img
+              <Image
+                width={60}
+                height={60}
                 alt="User"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCroPvN5vowf6Vdm9-E2ea-ztK92NYyaPvhcP4VlKI4xEGhT6he481hwFuoK3QfTfDJD7FffSZdWegMPJgCXZjDqzFWfa0-8iqzRJJ6OO6k8qHLB5j5h8YlDH88doBMdkPZlh3PS13qIn0u2ZoQmLes1YSM2Rx5M9OMFaOxDWrcGcy_1VyH22yu5dkWrxDIJ93NMMPEuk82OCymrveU0YzlvgbEFbkAF-XSltjGsXlYgUwazGo4IRdJ2ttknP7VhDOLTUj5KbGXOpE"
               />

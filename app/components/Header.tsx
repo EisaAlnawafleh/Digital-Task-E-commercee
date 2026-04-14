@@ -1,11 +1,9 @@
 "use client";
-import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import BurgerMenu from "./menu";
 import Link from "next/link";
 const Header = () => {
-  const [open, setOpen] = useState(false);
   const [search, setSearch] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [searchs, setSearchs] = useState("");
@@ -64,56 +62,53 @@ const Header = () => {
             <i className="ri-search-line text-white text-xl"></i>
           </button>
           <BurgerMenu />
-          <div
-            className={`${
-              search ? "fixed" : "hidden"
-            } inset-0 z-50   w-screen h-screen bg-black/90 `}
-          >
-            <div className="flex flex-col items-center justify-start pt-20 px-4 h-full">
-              <button
-                onClick={() => setSearch(false)}
-                className="absolute top-5 left-5 text-white text-3xl"
-              >
-                ✕
-              </button>
-
-              <div className="w-full max-w-2xl text-center md:text-left mb-6">
-                <h3 className="text-2xl font-semibold text-center text-white">
-                  ما الذي تبحث عنه؟
-                </h3>
-              </div>
-
-              <div className="w-full max-w-2xl">
-                <div className="flex items-center bg-[#1a1919] rounded-xl px-4 h-12 gap-2">
-                  <i className="ri-search-line text-xl text-gray-400"></i>
-
-                  <input
-                    type="search"
-                    value={searchs}
-                    onChange={(e) => setSearchs(e.target.value)}
-                    placeholder="ادخل كلمة البحث"
-                    className="flex-1 bg-transparent text-white focus:outline-none"
-                  />
-                </div>
-
-                <div className="mt-4 text-gray-400 text-sm">
-                  {searchs === "" ? null : "لا توجد نتائج"}
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <div className=" hidden xl:flex  flex-row gap-5 text-2xl  text-white">
-          <i
-            onClick={() => setOpen}
-            className="ri-global-line hover:bg-[#17181a] h-10 w-10 flex justify-center items-center rounded-[999] transform-all duration-300 cursor-pointer"
-          ></i>
+          <i className="ri-global-line hover:bg-[#17181a] h-10 w-10 flex justify-center items-center rounded-[999] transform-all duration-300 cursor-pointer"></i>
           <i className="ri-moon-line hover:bg-[#17181a] h-10 w-10 flex justify-center items-center rounded-[999] transform-all duration-300 cursor-pointer"></i>
           <i className="ri-heart-line hover:bg-[#17181a] h-10 w-10 flex justify-center items-center rounded-[999] transform-all duration-300 cursor-pointer"></i>
           <i className="ri-shopping-cart-2-line hover:bg-[#17181a] h-10 w-10 flex justify-center items-center rounded-[999] transform-all duration-300 cursor-pointer"></i>
           <Link href="/Login">
             <i className="ri-user-line hover:bg-[#17181a] h-10 w-10 flex justify-center items-center rounded-[999] transform-all duration-300 cursor-pointer"></i>
           </Link>
+        </div>
+      </div>
+      <div
+        className={`${
+          search ? "translate-y-0" : "translate-y-full"
+        } fixed inset-0 z-50   w-screen h-screen bg-black/95  transform transition-transform duration-300 ease-in-out`}
+      >
+        <div className="flex flex-col items-center justify-start pt-20 px-4 h-full">
+          <button
+            onClick={() => setSearch(false)}
+            className="absolute top-5 left-5 text-white text-3xl"
+          >
+            ✕
+          </button>
+
+          <div className="w-full max-w-2xl text-center md:text-left mb-6">
+            <h3 className="text-2xl font-semibold text-center text-white">
+              what are you looking for
+            </h3>
+          </div>
+
+          <div className="w-full max-w-2xl">
+            <div className="flex items-center bg-[#1a1919] rounded-xl px-4 h-12 gap-2">
+              <i className="ri-search-line text-xl text-gray-400"></i>
+
+              <input
+                type="search"
+                value={searchs}
+                onChange={(e) => setSearchs(e.target.value)}
+                placeholder="Enter the search term"
+                className="flex-1 bg-transparent text-white focus:outline-none"
+              />
+            </div>
+
+            <div className="mt-4 text-gray-400 text-sm">
+              {searchs === "" ? null : "No results found"}
+            </div>
+          </div>
         </div>
       </div>
     </div>

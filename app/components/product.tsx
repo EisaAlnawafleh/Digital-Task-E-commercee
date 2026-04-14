@@ -1,4 +1,4 @@
-import Aos from "aos";
+import Image from "next/image";
 import "aos/dist/aos.css";
 const Product = () => {
   return (
@@ -31,7 +31,10 @@ const Product = () => {
       >
         <div className="group cursor-pointer  w-full sm:w-[48%] lg:w-[30%]  bg-[#131313] rounded-3xl p-6 transition-all duration-500 hover:shadow-[0_0_10px_rgba(0,255,255,0.1)] hover:-translate-y-2">
           <div className="relative aspect-square mb-6 rounded-2xl overflow-hidden bg-[#1a1a1a] flex items-center justify-center">
-            <img
+            <Image
+              width={300}
+              height={300}
+              alt=""
               src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
               className="w-4/5 group-hover:scale-110 transition duration-500 object-contain"
             />
@@ -56,7 +59,10 @@ const Product = () => {
 
         <div className="group cursor-pointer  w-full sm:w-[48%] lg:w-[30%] bg-[#131313] rounded-3xl p-6 transition-all duration-500 hover:shadow-[0_0_10px_rgba(0,255,255,0.1)] hover:-translate-y-2">
           <div className="relative aspect-square mb-6 rounded-2xl overflow-hidden bg-[#1a1a1a] flex items-center justify-center">
-            <img
+            <Image
+              width={300}
+              height={300}
+              alt=""
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuA53HCm-tQHVgfJ96-3zyyfZtlDomaaqnnG35QjD_mMxbRN0qL3XEqPGbA3-NFG8uCJy3Yo8yaXpndkPZLVefETNKAzYVhPspMzg8RSd_PSwhk6PizhOqb4ID8VXuyRsbllFp0nyluGj6npNpr5iUcuYwU3BtW86bpYVd8uupxDB2nyM98FBswKDlyPrk1U8DQdTv9xcgo1gBYj0vz8iE9c9KkSwaU3lv2enqT-oJdVIRNyucKRnRnmqPmtmxB-VME8eNoiLSQzRWo"
               className="w-4/5 group-hover:scale-110 transition duration-500 object-contain"
             />
@@ -78,7 +84,10 @@ const Product = () => {
 
         <div className="group cursor-pointer  w-full sm:w-[48%] lg:w-[30%] bg-[#131313] rounded-3xl p-6 transition-all duration-500 hover:shadow-[0_0_10px_rgba(0,255,255,0.1)] hover:-translate-y-2">
           <div className="relative aspect-square mb-6 rounded-2xl overflow-hidden bg-[#1a1a1a] flex items-center justify-center">
-            <img
+            <Image
+              width={300}
+              height={300}
+              alt=""
               src="https://images.unsplash.com/photo-1580910051074-3eb694886505"
               className="w-4/5 group-hover:scale-110 transition duration-500 object-contain"
             />
@@ -107,7 +116,10 @@ const Product = () => {
         </div>
         <div className="group cursor-pointer  w-full sm:w-[48%] lg:w-[30%] bg-[#131313] rounded-3xl p-6 transition-all duration-500 hover:shadow-[0_0_10px_rgba(0,255,255,0.1)] hover:-translate-y-2">
           <div className="relative aspect-square mb-6 rounded-2xl overflow-hidden bg-[#1a1a1a] flex items-center justify-center">
-            <img
+            <Image
+              width={300}
+              height={300}
+              alt=""
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuChLhja0RCgMMR0xMOD5NFz2my_3XZezz7-9RKtkR8CJ1oGzeGdhebMOAkDq2uEoNhZ1_TjwKaZZz4q6q205oaCnX3L0b2r-6a7Tp6-e2ARhNsecYl_Jc-r4unxUbaKACKdeV4MAX0vl0Opy5XE0C76XSHm7RjJ8-B9bmw34xb-PxXsFRr6T7WRQttfDCAyLlz0i6OWtC5tdt-r2u446oO9cmvvKjlY28OnuYXTb7Vs56MZLxeRkQrgvXXzeviIEf09pmcojMxFxN4"
               className="w-4/5 group-hover:scale-110 transition duration-500 object-contain"
             />
@@ -134,7 +146,10 @@ const Product = () => {
         </div>
         <div className="group cursor-pointer  w-full sm:w-[48%] lg:w-[30%] bg-[#131313] rounded-3xl p-6 transition-all duration-500 hover:shadow-[0_0_10px_rgba(0,255,255,0.1)] hover:-translate-y-2">
           <div className="relative aspect-square mb-6 rounded-2xl overflow-hidden bg-[#1a1a1a] flex items-center justify-center">
-            <img
+            <Image
+              width={300}
+              height={300}
+              alt=""
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-nV5pyGIVG3gd_xk8p64k-qBhJeTe8qaf_Gn_yKl-dVoa7suwGdSzdvX4Sr3XEnmGW152GYINOWOqCZO3LadWzUrNswevc7J1MF-YG8p_AT5xAj6GoHbWKOqZsdauyqQuZoSxtrIfO1U2nCokds_ZkJZY3fvUC3KdjjLPZuO6tdcP68XUNyadZax5WyCGar_0IVuZ0IztDVelnMBtnOVPtEnN9YiV6M96r3SVzyQQMVzSYytdNxrTECAQqk86rK-KJ74n9Spe9h8"
               className="w-4/5 group-hover:scale-110 transition duration-500 object-contain"
             />
@@ -164,7 +179,10 @@ const Product = () => {
 
         <div className="group cursor-pointer bg-[#131313]  w-full sm:w-[48%] lg:w-[30%] rounded-3xl p-6 transition-all duration-500 hover:shadow-[0_0_10px_rgba(0,255,255,0.1)] hover:-translate-y-2">
           <div className="relative aspect-square mb-6 rounded-2xl overflow-hidden bg-[#1a1a1a] flex items-center justify-center">
-            <img
+            <Image
+              width={300}
+              height={300}
+              alt=""
               src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0"
               className="w-4/5 group-hover:scale-110 transition duration-500 object-contain"
             />

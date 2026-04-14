@@ -1,5 +1,3 @@
-import React from "react";
-import Aos from "aos";
 import "aos/dist/aos.css";
 const Footer = () => {
   return (
@@ -7,7 +5,7 @@ const Footer = () => {
       data-aos="fade-down"
       className="grid grid-cols-1 md:grid-cols-4 gap-12 mt-20 px-12 py-20 border-t border-zinc-800/30 max-w-360 mx-auto"
     >
-      <div data-aos="fade-right" className="flex flex-col gap-6">
+      <div  className="flex flex-col gap-6">
         <div className="text-xl font-black text-zinc-100 font-headline">
           Digtial Task Phone
         </div>
@@ -16,7 +14,7 @@ const Footer = () => {
         </p>
       </div>
 
-      <div data-aos="fade-down" className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4">
         <h4 className="text-cyan-400 font-headline tracking-wide text-xs uppercase font-bold">
           Quick Links
         </h4>
@@ -56,7 +54,7 @@ const Footer = () => {
         </ul>
       </div>
 
-      <div data-aos="fade-down" className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4">
         <h4 className="text-cyan-400 font-headline tracking-wide text-xs uppercase font-bold">
           Support
         </h4>
@@ -96,7 +94,7 @@ const Footer = () => {
         </ul>
       </div>
 
-      <div data-aos="fade-left" className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6">
         <h4 className="text-cyan-400 font-headline tracking-wide text-xs uppercase font-bold">
           Newsletter
         </h4>

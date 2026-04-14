@@ -1,5 +1,4 @@
-import React from "react";
-import Aos from "aos";
+import Image from "next/image";
 import "aos/dist/aos.css";
 const FlashSale = () => {
   return (
@@ -16,19 +15,19 @@ const FlashSale = () => {
           </p>
 
           <div className="flex gap-4">
-            <div className="bg-on-primary-container text-primary-container p-4 rounded-2xl text-center min-w-[60px] sm:min-w-[70px] lg:min-w-[80px]">
+            <div className="bg-on-primary-container text-primary-container p-4 rounded-2xl text-center min-w-15 sm:min-w-17.5 lg:min-w-20">
               <span className="text-3xl font-bold block">02</span>
               <span className="text-[10px] uppercase tracking-widest font-bold">
                 Hours
               </span>
             </div>
-            <div className="bg-on-primary-container text-primary-container p-4 rounded-2xl text-center min-w-[60px] sm:min-w-[70px] lg:min-w-[80px]">
+            <div className="bg-on-primary-container text-primary-container p-4 rounded-2xl text-center min-w-15 sm:min-w-17.5 lg:min-w-20">
               <span className="text-3xl font-bold block">45</span>
               <span className="text-[10px] uppercase tracking-widest font-bold">
                 Mins
               </span>
             </div>
-            <div className="bg-on-primary-container text-primary-container p-4 rounded-2xl text-center min-w-[60px] sm:min-w-[70px] lg:min-w-[80px]">
+            <div className="bg-on-primary-container text-primary-container p-4 rounded-2xl text-center min-w-15 sm:min-w-17.5 lg:min-w-20">
               <span className="text-3xl font-bold block">12</span>
               <span className="text-[10px] uppercase tracking-widest font-bold">
                 Secs
@@ -38,7 +37,9 @@ const FlashSale = () => {
         </div>
 
         <div data-aos="fade-left" className="z-10 relative">
-          <img
+          <Image
+            width={500}
+            height={500}
             alt="Audio gear"
             className="w-full max-w-sm sm:max-w-md lg:max-w-lg"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOeRnC-gIZSj0EYhOV0D0egLx8zk_YsJwLwnQMnlRUyJPlNYQPo7Ur5UFx4DZjPdtpRR2OLV9V80H0WR_6AZCwnoBPUFKeDaMe8X40Qoip7XHCG-pP_sQkoh_Fu6RjINrmzld6kZ0YKORwiEDTlq5VlYspKF-QAhYwUMHUwfb7Py167pI_y0je252MCjwUzDvPJAIgNmXwC4S2ZrFyBBMkWuGayPGtbcAxXG8P3RaNMJChp7TrVaLF-aZabnpdLCXu4eMl53AQCoc"
