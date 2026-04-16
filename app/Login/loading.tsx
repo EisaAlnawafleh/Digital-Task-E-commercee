@@ -3,7 +3,6 @@
 const PageLoader = () => {
   return (
     <div className="fixed inset-0 bg-white z-[9999] flex items-center justify-center overflow-hidden">
-      {/* السيارة */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[speeder_0.4s_linear_infinite]">
         <span className="absolute top-[-19px] left-[60px] h-[5px] w-[35px] bg-black rounded-[2px_10px_1px_0]">
           <span className="absolute w-[30px] h-[1px] bg-black animate-[fazer1_0.2s_linear_infinite]"></span>
@@ -23,7 +22,6 @@ const PageLoader = () => {
         </div>
       </div>
 
-      {/* الخطوط */}
       <div className="absolute w-full h-full">
         <span className="absolute top-[20%] w-[20%] h-[2px] bg-black animate-[lf_0.6s_linear_infinite]"></span>
         <span className="absolute top-[40%] w-[20%] h-[2px] bg-black animate-[lf2_0.8s_linear_infinite]"></span>
@@ -31,7 +29,6 @@ const PageLoader = () => {
         <span className="absolute top-[80%] w-[20%] h-[2px] bg-black animate-[lf4_0.5s_linear_infinite]"></span>
       </div>
 
-      {/* animations */}
       <style jsx>{`
         @keyframes speeder {
           0% {

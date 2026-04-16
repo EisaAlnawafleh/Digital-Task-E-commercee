@@ -28,12 +28,16 @@ const Header = () => {
           <div className="header-name ">Digtial Task Phone</div>
         </div>
         <div className=" flex-row gap-5 hidden xl:flex ">
-          <div className="text-[#1fb6cd] border-b font-bold cursor-pointer ">
-            Home
-          </div>
-          <div className="hover:text-white cursor-pointer transform-all duration-300">
-            SHOP
-          </div>
+          <Link href="/">
+            <div className="text-[#1fb6cd] border-b font-bold cursor-pointer ">
+              Home
+            </div>
+          </Link>
+          <Link href="/product">
+            <div className="hover:text-white cursor-pointer transform-all duration-300">
+              SHOP
+            </div>
+          </Link>
           <div className="hover:text-white cursor-pointer transform-all duration-300">
             Categories
           </div>
@@ -67,7 +71,9 @@ const Header = () => {
           <i className="ri-global-line hover:bg-[#17181a] h-10 w-10 flex justify-center items-center rounded-[999] transform-all duration-300 cursor-pointer"></i>
           <i className="ri-moon-line hover:bg-[#17181a] h-10 w-10 flex justify-center items-center rounded-[999] transform-all duration-300 cursor-pointer"></i>
           <i className="ri-heart-line hover:bg-[#17181a] h-10 w-10 flex justify-center items-center rounded-[999] transform-all duration-300 cursor-pointer"></i>
-          <i className="ri-shopping-cart-2-line hover:bg-[#17181a] h-10 w-10 flex justify-center items-center rounded-[999] transform-all duration-300 cursor-pointer"></i>
+          <Link href="/product">
+            <i className="ri-shopping-cart-2-line hover:bg-[#17181a] h-10 w-10 flex justify-center items-center rounded-[999] transform-all duration-300 cursor-pointer"></i>
+          </Link>
           <Link href="/Login">
             <i className="ri-user-line hover:bg-[#17181a] h-10 w-10 flex justify-center items-center rounded-[999] transform-all duration-300 cursor-pointer"></i>
           </Link>

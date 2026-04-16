@@ -35,7 +35,7 @@ const Login = () => {
   return (
     <main className="min-h-screen flex items-center justify-center px-4 py-20 bg-[#0b0f14]">
       <div
-        data-aos="fade-down"
+        // data-aos="fade-down"
         className="w-full max-w-5xl flex flex-col md:flex-row rounded-2xl overflow-hidden border border-white/10 backdrop-blur-xl bg-white/5 shadow-[0_0_10px_rgba(0,255,255,0.08)]"
       >
         <div className="relative w-full md:w-1/2 h-72 md:h-auto group overflow-hidden">

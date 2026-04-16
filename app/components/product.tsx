@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "aos/dist/aos.css";
+import Link from "next/link";
 const Product = () => {
   return (
     <div data-aos="fade-down" className="bg-[#131313]">
@@ -17,9 +18,11 @@ const Product = () => {
             data-aos="fade-left"
             className="text-[#1fb6cd]/80  justify-center    mt-4 flex gap-3 cursor-pointer"
           >
-            <div className="hover:text-[#1fb6cd] transform duration-300">
-              View All
-            </div>
+            <Link href="/product">
+              <div className="hover:text-[#1fb6cd] transform duration-300">
+                View All
+              </div>
+            </Link>
             <i className="ri-arrow-right-line text-[#1fb6cd]/80 hover:text-[#1fb6cd] transform duration-300 "></i>
           </div>
         </div>
