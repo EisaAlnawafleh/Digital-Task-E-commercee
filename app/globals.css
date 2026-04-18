@@ -2,7 +2,6 @@
 @import "remixicon/fonts/remixicon.css";
 
 body {
-  background-color: #0e0e0e;
   @apply font-sans bg-[#0e0e0e] text-white;
   font-family: "Manrope", sans-serif;
   overflow-x: hidden;
@@ -315,4 +314,52 @@ body {
     opacity: 0;
   }
 }
-
+/* Theme mode */
+.dark {
+  --bg_Header: #0e0e0e99;
+  --bg_Rev: #131313;
+  --text: #898787;
+  --Search: #1a1919;
+  --bg: #0e0e0e;
+  --text_body: #fff;
+  --card: #201f1f;
+  --card2: #201f1f;
+  --card3: #1a1a1a;
+  --bg_product: #131313;
+  --menu: #fff;
+  --bg1: #0e0e0e;
+  --bg2: #131313;
+  --bg_hover: #17181a;
+  --footer_text: #c7c7c7;
+  --shadow: 0 0 20px black;
+  --loading-bg: black;
+  --loading-color: white;
+}
+.white {
+  --bg_Header: #e9eef6;
+  --bg_Rev: #d9e2ef;
+  --text: #444746;
+  --Search: #ffffff;
+  --bg: #f0f4f8;
+  --text_body: #000;
+  --card: #d9e2ef;
+  --card2: #ffffff;
+  --card3: #d9e2ef;
+  --bg_product: #e9eef6;
+  --menu: #000;
+  --bg1: #eee;
+  --bg2: #f0f4f8;
+  --bg_hover: #dce1e9;
+  --footer_text: #2b2b2b;
+  --shadow: 0 0 20px white;
+  --loading-bg: white;
+  --loading-color: black;
+}
+.card {
+  background: var(--card);
+  transition: 0.3s;
+}
+.card:hover {
+  background: var(--bg_hover);
+  color: var(--text_hover);
+}

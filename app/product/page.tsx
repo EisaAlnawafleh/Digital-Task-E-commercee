@@ -36,54 +36,48 @@ const StoreUI = () => {
   });
 
   return (
-    <div className="bg-[#0e0e0e] min-h-screen text-white flex flex-col lg:flex-row p-4 sm:p-6 gap-6 mt-20 lg:mt-30">
-      {/* Sidebar */}
-      <div className="w-full lg:w-54 bg-[#131313] p-4 sm:p-6 rounded-2xl space-y-4">
-        {["All", "Smartphones", "Tablets", "Smartwatches"].map((c) => (
-          <button
-            key={c}
-            onClick={() => setCategory(c)}
-            className={`block w-full text-left cursor-pointer ${
-              category === c ? "text-cyan-400" : "text-gray-400"
-            }`}
-          >
-            {c}
-          </button>
-        ))}
-      </div>
-
-      {/* Content */}
-      <div className="flex-1 space-y-6">
-        {/* Search */}
-        <input
-          value={query}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setQuery(e.target.value)
-          }
-          placeholder="Search..."
-          className="w-full bg-[#1a1919] px-4 py-3 rounded-xl focus:outline-0 text-sm sm:text-base"
-        />
-
-        {/* حالات */}
-        {loading && <p>Loading...</p>}
-        {error && <p className="text-red-400">{error}</p>}
-        {!loading && filtered.length === 0 && <p>No products</p>}
-
-        {/* Products Grid */}
+    <div data-aos="fade-down">
+      <div
+        style={{ background: "var(--bg1)" }}
+        className="min-h-screen text-white  flex-col md:flex-row  flex p-6 gap-6 pt-30"
+      >
         <div
-          className="
-        grid 
-        grid-cols-1 
-        sm:grid-cols-2 
-        md:grid-cols-2 
-        lg:grid-cols-3 
-        xl:grid-cols-4 
-        gap-4 sm:gap-6
-      "
+          style={{ background: "var(--bg2)" }}
+          className="w-full md:w-64  bg-[#131313]  p-6 rounded-2xl space-y-4"
         >
-          {filtered.map((p) => (
-            <ProductCard key={p.id} product={p} onAdd={add} />
+          {["All", "Smartphones", "Tablets", "Smartwatches"].map((c) => (
+            <button
+              key={c}
+              onClick={() => setCategory(c)}
+              className={`block cursor-pointer transform duration-300 ${
+                category === c ? "text-cyan-400" : "text-gray-400"
+              }`}
+            >
+              {c}
+            </button>
           ))}
+        </div>
+
+        <div className="flex-1 space-y-6">
+          <input
+            style={{ background: "var(--bg2)", color: "var(--text)" }}
+            value={query}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setQuery(e.target.value)
+            }
+            placeholder="Search..."
+            className="w-full bg-[#1a1919] px-4 py-3 rounded-xl focus:outline-0"
+          />
+
+          {loading && <p>Loading...</p>}
+          {error && <p className="text-red-400">{error}</p>}
+          {!loading && filtered.length === 0 && <p>No products</p>}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filtered.map((p) => (
+              <ProductCard key={p.id} product={p} onAdd={add} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

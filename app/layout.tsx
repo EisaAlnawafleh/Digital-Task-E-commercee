@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import { ThemeProvider } from "./components/ThemeProvider";
 import HeaderWrapper from "./components/hideHeader";
 export const metadata: Metadata = {
   title: "Digtial Task Phone",
@@ -13,9 +13,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="">
-        <HeaderWrapper />
-        {children}
+      <body >
+        <ThemeProvider>
+          <HeaderWrapper />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
