@@ -17,7 +17,10 @@ const Product = () => {
       >
         <div className="flex flex-row gap-10 pt-20 flex-wrap  justify-between  ">
           <div className="flex flex-col gap-3 justify-center ">
-            <div style={{ color: "var(--text)" }} className="text-[32px]">
+            <div
+              style={{ color: "var(--text)" }}
+              className="text-xl sm:text-2xl md:text-3xl lg:text-[32px]"
+            >
               Pinnacle <span className="text-[#1fb6cd]">Performance</span>
             </div>
             <div className="text-[#898787]">
@@ -42,7 +45,7 @@ const Product = () => {
           once: true,
           amount: 0.2,
         }}
-        className="flex mx-5 flex-wrap m-auto flex-row justify-center items-center   gap-8 p-8  mt-5 "
+        className="flex px-5 flex-wrap m-auto flex-row justify-center items-center   gap-5 py-10  mt-5 "
       >
         {products.slice(-6).map((item) => (
           <div
