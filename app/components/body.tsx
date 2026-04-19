@@ -1,14 +1,23 @@
 import Image from "next/image";
 import "aos/dist/aos.css";
 import Link from "next/link";
+import { motion } from "framer-motion";
 const Body = () => {
   return (
     <div
-      data-aos="fade-down"
       style={{ background: "var(--bg)" }}
       className="flex flex-col lg:flex-row px-5 md:px-10 lg:px-15 gap-8 md:gap-12 lg:gap-15 pt-30 md:pt-40 lg:pt-70 justify-around"
     >
-      <div className="flex flex-col gap-6 md:gap-10  text-center lg:text-left items-center lg:items-start">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{
+          duration: 0.7,
+          ease: [0.25, 0.1, 0.25, 1],
+        }}
+        className="flex flex-col gap-6 md:gap-10  text-center lg:text-left items-center lg:items-start"
+      >
         <div className="text-[16px] md:text-[20px] text-[#81ecff] font-bold">
           The Future is Here
         </div>
@@ -35,7 +44,7 @@ const Body = () => {
             EXPLORE DEALS
           </div>
         </div>
-      </div>
+      </motion.div>
       <div>
         <div className="relative  group">
           <Image

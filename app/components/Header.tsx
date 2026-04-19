@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import BurgerMenu from "./menu";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { useTheme } from "./ThemeProvider";
 import { usePathname } from "next/navigation";
 const Header = () => {
@@ -24,7 +25,13 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   });
   return (
-    <div data-aos="fade-down" className="fixed top-0 z-50">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="fixed top-0 z-50"
+    >
       <div
         style={{ background: "var(--bg_Header)", color: "var(--text)" }}
         className={`${scrolled ? "shadow-[var(--shadow)]" : ""}  ${theme}  h-20 pt-5 w-screen gap-5  rounded-b-xl bg-surface/60  backdrop-blur-md `}
@@ -173,7 +180,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

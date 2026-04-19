@@ -8,7 +8,7 @@ const BurgerMenu = () => {
   const itemStyle =
     "flex items-center gap-3 px-4 py-3 rounded-xl cursor-pointer transition hover:bg-white/10 hover:translate-x-1";
   return (
-    <div className="relative s ">
+    <div className="relative  ">
       <div
         onClick={() => setOpen(!open)}
         className="w-10 h-10 flex flex-col  justify-center items-center cursor-pointer rounded-lg hover:bg-[#17181a] transition"

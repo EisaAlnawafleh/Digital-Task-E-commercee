@@ -2,19 +2,27 @@
 
 const SkeletonLoader = () => {
   return (
-    <div className="fixed inset-0 overflow-hidden z-[9999]">
-      <div className="loader ">
+    <div
+      className="fixed inset-0 overflow-hidden z-[9999]"
+      style={{
+        background: "var(--loading-bg)",
+        color: "var(--loading-color)",
+      }}
+    >
+      <div className="loader">
         <span>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
         </span>
+
         <div className="base">
           <span></span>
           <div className="face"></div>
         </div>
       </div>
+
       <div className="longfazers">
         <span></span>
         <span></span>
