@@ -59,12 +59,14 @@ const Header = () => {
                 SHOP
               </div>
             </Link>
-            <div
-              style={{ color: "var(--text)" }}
-              className={` font-bold cursor-pointer ${pathname === " Categories" ? "text-[#1fb6cd] border-b" : "hover:text-white"} `}
-            >
-              Categories
-            </div>
+            <Link href="/About">
+              <div
+                style={{ color: "var(--text)" }}
+                className={` font-bold cursor-pointer ${pathname === "/About" ? "text-[#1fb6cd] border-b" : "hover:text-white"} `}
+              >
+                About
+              </div>
+            </Link>
             <div
               style={{ color: "var(--text)" }}
               className={`font-bold cursor-pointer ${pathname === " Deals" ? "text-[#1fb6cd] border-b" : "hover:text-white"} `}

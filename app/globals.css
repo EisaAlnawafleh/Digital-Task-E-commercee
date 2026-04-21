@@ -73,7 +73,13 @@ body {
 .search-btn {
   display: none;
 }
-
+/*  */
+@media (max-width:768px) {
+  .point{
+    display: none;
+  }
+  
+}
 /* Small screens */
 @media (max-width: 640px) {
   .search-full {
