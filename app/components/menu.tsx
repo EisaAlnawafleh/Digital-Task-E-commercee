@@ -63,6 +63,12 @@ const BurgerMenu = () => {
               <span>Store</span>
             </div>
           </Link>
+          <Link href="/About">
+            <div className={itemStyle}>
+              <i className="ri-file-info-line"></i>
+              <span>About</span>
+            </div>
+          </Link>
 
           <div className={itemStyle}>
             <i className="ri-shopping-cart-2-line cursor-pointer"></i>

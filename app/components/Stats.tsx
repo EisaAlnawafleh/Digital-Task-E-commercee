@@ -1,5 +1,59 @@
 "use client";
 import { motion } from "framer-motion";
+import { useEffect, useState ,useRef } from "react";
+
+type CounterProps = {
+  target: number;
+  suffix: string;
+};
+
+const Counter = ({ target, suffix }: CounterProps) => {
+  const ref = useRef<HTMLSpanElement | null>(null);
+  const [count, setCount] = useState(0);
+  const [start, setStart] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setStart(true);
+        }
+      },
+      { threshold: 0.5 },
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!start) return;
+
+    let value = 0;
+    const increment = target / 80;
+
+    const timer = setInterval(() => {
+      value += increment;
+
+      if (value >= target) {
+        value = target;
+        clearInterval(timer);
+      }
+
+      setCount(Math.floor(value));
+    }, 20);
+
+    return () => clearInterval(timer);
+  }, [start, target]);
+
+  return (
+    <span ref={ref}>
+      {count}
+      {suffix}
+    </span>
+  );
+};
 const Stats = () => {
   return (
     <div
@@ -18,7 +72,7 @@ const Stats = () => {
       >
         <div className="flex flex-col gap-5">
           <div className="text-6xl font-extrabold text-primary text-[#69daff]">
-            2M+
+            <Counter target={2000000} suffix="+" />
           </div>
           <p
             style={{ color: "var(--text_body)" }}
@@ -30,7 +84,7 @@ const Stats = () => {
 
         <div className="flex flex-col gap-5">
           <div className="text-6xl font-extrabold text-secondary text-[#d674ff]">
-            50+
+            <Counter target={50} suffix="+" />
           </div>
           <p
             style={{ color: "var(--text_body)" }}
@@ -42,7 +96,7 @@ const Stats = () => {
 
         <div className="flex flex-col gap-5">
           <div className="text-6xl font-extrabold text-primary-fixed text-[#69daff]">
-            99%
+            <Counter target={99} suffix="%" />
           </div>
           <p
             style={{ color: "var(--text_body)" }}
