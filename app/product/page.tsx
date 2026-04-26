@@ -6,6 +6,7 @@ import { useDebounce } from "../hooks/useDebounce";
 import { useCart } from "../hooks/useCart";
 import { products as productsData } from "../data/products";
 import { motion } from "framer-motion";
+import ScrollTopButton from "../components/ScrollTop";
 const StoreUI = () => {
   const [query, setQuery] = useState<string>("");
   const [category, setCategory] = useState<string>("All");
@@ -92,6 +93,7 @@ const StoreUI = () => {
           ))}
         </div>
       </motion.div>
+      <ScrollTopButton />
     </div>
   );
 };

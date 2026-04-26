@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -63,17 +64,22 @@ const Login = () => {
   };
 
   return (
-    <motion.main
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{
-        once: true,
-        amount: 0.2,
-      }}
-      className="min-h-screen flex items-center justify-center px-4 py-20 bg-[#0b0f14]"
-    >
-      <div className="w-full max-w-5xl flex flex-col md:flex-row rounded-2xl overflow-hidden border border-white/10 backdrop-blur-xl bg-white/5 shadow-[0_0_10px_rgba(0,255,255,0.08)]">
+    <main className="min-h-screen flex items-center  justify-center px-4 py-20 bg-[#0b0f14]">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{
+          once: true,
+          amount: 0.2,
+        }}
+        className="w-full max-w-5xl flex flex-col md:flex-row rounded-2xl overflow-hidden border border-white/10 backdrop-blur-xl bg-white/5 shadow-[0_0_10px_rgba(0,255,255,0.08)]"
+      >
         <div className="relative w-full md:w-1/2 h-72 md:h-auto group overflow-hidden">
+          <Link href="/">
+            <button className="absolute top-9 left-10 cursor-pointer z-20 flex items-center gap-2 text-white/70 hover:text-white transition duration-300">
+              ← Back
+            </button>
+          </Link>
           <Image
             width={500}
             height={500}
@@ -179,8 +185,8 @@ const Login = () => {
             </div>
           </form>
         </div>
-      </div>
-    </motion.main>
+      </motion.div>
+    </main>
   );
 };
 

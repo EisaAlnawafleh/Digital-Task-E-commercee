@@ -34,6 +34,7 @@ const FlashSale = () => {
   }, []);
   return (
     <div
+      id="sale"
       style={{ background: "var(--bg)", color: "var(--text)" }}
       className="mx-auto px-8 pt-10"
     >

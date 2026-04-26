@@ -2,6 +2,7 @@ import Image from "next/image";
 import "aos/dist/aos.css";
 import Link from "next/link";
 import { motion } from "framer-motion";
+
 const Body = () => {
   return (
     <div
@@ -40,7 +41,14 @@ const Body = () => {
               SHOP NOW
             </div>
           </Link>
-          <div className="w-54 h-14 hover:bg-[#26262666]/120 transform duration-300 bg-[#26262666] cursor-pointer font-medium  flex justify-center items-center rounded-3xl">
+          <div
+            onClick={() =>
+              document
+                .getElementById("sale")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="w-54 h-14 hover:bg-[#26262666]/120 transform duration-300 bg-[#26262666] cursor-pointer font-medium  flex justify-center items-center rounded-3xl"
+          >
             EXPLORE DEALS
           </div>
         </div>

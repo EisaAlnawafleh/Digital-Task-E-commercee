@@ -5,6 +5,7 @@ import FlashSale from "./components/FlashSale";
 import Footer from "./components/Footer";
 import Product from "./components/product";
 import Reviews from "./components/Review";
+import ScrollTopButton from "./components/ScrollTop";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <FlashSale />
       <Reviews />
       <Footer />
+      <ScrollTopButton />
     </div>
   );
 }

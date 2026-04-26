@@ -7,11 +7,10 @@ import Team from "../components/Team";
 import Features from "../components/Features";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
+import ScrollTopButton from "../components/ScrollTop";
 const About = () => {
   return (
-    <div style={{ background: "var(--bg)" }}
-    className="flex flex-col gap-5"
-    >
+    <div style={{ background: "var(--bg)" }} className="flex flex-col gap-5">
       <About_Body />
       <TimeLine />
       <MissionVision />
@@ -20,6 +19,7 @@ const About = () => {
       <Team />
       <CTA />
       <Footer />
+      <ScrollTopButton />
     </div>
   );
 };

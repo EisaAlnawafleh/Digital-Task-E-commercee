@@ -6,12 +6,11 @@ import Header from "./Header";
 const HeaderWrapper = () => {
   const pathname = usePathname();
 
-  const hideHeaderRoutes = ["/Login"];
+  const hideHeader = pathname === "/Login" || pathname.startsWith("/product/");
 
-  if (hideHeaderRoutes.includes(pathname)) return null;
+  if (hideHeader) return null;
 
   return <Header />;
 };
 
 export default HeaderWrapper;
-
